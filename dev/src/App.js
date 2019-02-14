@@ -11,3 +11,12 @@ class App extends Component {
 }
 
 export default App;
+
+/* imports already available: 
+
+-- axios 
+-- react-dom 
+-- react-router-dom for { Route, BrowserRouter, Link } 
+-- styled-components for styled
+
+*/
