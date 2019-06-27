@@ -30,7 +30,6 @@ export const Media = styled.div`{
     flex-direction: row;
     overflow: scroll;
     padding: 15px;
-    width: 300px;
 
     div {
         margin-right: 8px;

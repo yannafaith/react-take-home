@@ -45,3 +45,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.App {
+	width: 400px;
+	margin: 0 auto;
+}
