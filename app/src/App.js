@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Header } from './styledcomponents.js'
 
 const App = () => {
 
@@ -8,8 +9,8 @@ const App = () => {
   const getData = () => {
     const URL = 'https://www.plugco.in/public/take_home_sample_feed';
     axios.get(URL).then( res => {
-      console.log(res);
       setData(res.data.campaigns);
+      console.log(res);
     }).catch( err => {
       console.log(err);
     })
@@ -21,10 +22,21 @@ const App = () => {
 
   return (
     <div className="App">
-      {data && data[0]['campaign_name']}
+      {data && data.map(cam => {
+        return (
+          <div>
+            <Header>
+              <img src={cam['campaign_icon_url']} alt='icon'/>
+              <div>
+                <h3>{cam['campaign_name']}</h3>
+                <p>{cam['pay_per_install']} per install </p>
+              </div>
+            </Header>
+          </div>
+        )
+      })}
     </div>
   );
-
 };
 
 export default App;
