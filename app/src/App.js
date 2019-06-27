@@ -25,7 +25,7 @@ const App = () => {
       {data && data.map(cam => {
         return (
           <>
-          
+
             <Header>
               <img src={cam['campaign_icon_url']} alt='icon'/>
               <div>
@@ -41,8 +41,8 @@ const App = () => {
                     <div>
                       <img src={content['cover_photo_url']} alt=''/>
                       <Buttons>
-                        <button>Link</button>
-                        <button>Link</button>
+                        <button><i class="fal fa-link fa-flip-vertical"></i> </button>
+                        <button><i class="fal fa-arrow-to-bottom"></i></button>
                       </Buttons>
                     </div>
                   );

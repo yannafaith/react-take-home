@@ -45,12 +45,17 @@ export const Media = styled.div`{
 export const Buttons = styled.div`{
     display: flex;
     width: 100px;
+    justify-content: space-between;
 
     button {
-        height: 50px;
-        width: 47%;
-        margin-left: 3%;
+        height: 35px;
+        width: 49%;
         border: solid black 1px;
+        border-radius: 5px;
+        background-color: white;
+        border-color: #cddee6;
+        color: gray;
+        font-size: 1em;
     }
 }`;
 
