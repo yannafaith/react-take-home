@@ -1,22 +1,31 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h2>Happy Hacking!</h2>
-      </div>
-    );
-  }
-}
+const App = () => {
+
+  const [data, setData] = useState(null);
+
+  const getData = () => {
+    const URL = 'https://www.plugco.in/public/take_home_sample_feed';
+    axios.get(URL).then( res => {
+      console.log(res);
+      setData(res.data.campaigns);
+    }).catch( err => {
+      console.log(err);
+    })
+  };
+
+  useEffect(() => {
+    getData()
+  }, []);
+
+  return (
+    <div className="App">
+      {data && data[0]['campaign_name']}
+    </div>
+  );
+
+};
 
 export default App;
 
-/* imports already available: 
-
--- axios 
--- react-dom 
--- react-router-dom for { Route, BrowserRouter, Link } 
--- styled-components for styled
-
-*/
