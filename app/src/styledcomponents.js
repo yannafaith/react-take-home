@@ -30,6 +30,7 @@ export const Media = styled.div`{
     flex-direction: row;
     overflow: scroll;
     padding: 15px;
+    width: 300px;
 
     div {
         margin-right: 8px;
@@ -38,6 +39,17 @@ export const Media = styled.div`{
     img {
         height: 200px;
         width: 100px;
+        opacity: .6;
+    }
+
+    #play {
+        color: 
+        #27cc5c;
+        position: relative;
+        bottom: 95px;
+        left: 40px;
+        font-size: 1.5em;
+        opacity: 1;
     }
 
 }`;
@@ -56,6 +68,12 @@ export const Buttons = styled.div`{
         border-color: #cddee6;
         color: gray;
         font-size: 1em;
+        cursor: pointer;
+
+        a {
+            color: gray;
+        }
     }
+
 }`;
 

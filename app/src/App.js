@@ -16,6 +16,11 @@ const App = () => {
     })
   };
 
+  const copy = (link) => {
+    navigator.clipboard.writeText(link)
+  };
+
+
   useEffect(() => {
     getData()
   }, []);
@@ -25,7 +30,6 @@ const App = () => {
       {data && data.map(cam => {
         return (
           <>
-
             <Header>
               <img src={cam['campaign_icon_url']} alt='icon'/>
               <div>
@@ -40,9 +44,10 @@ const App = () => {
                   return (
                     <div>
                       <img src={content['cover_photo_url']} alt=''/>
+                      <i id='play' class="fas fa-play"></i>
                       <Buttons>
-                        <button><i class="fal fa-link fa-flip-vertical"></i> </button>
-                        <button><i class="fal fa-arrow-to-bottom"></i></button>
+                        <button onClick={() => copy(content['tracking_link'])}><i className="fal fa-link fa-flip-vertical"></i> </button>
+                        <button><a href={content['download_url']} download_url><i className="fal fa-arrow-to-bottom"></i></a></button>
                       </Buttons>
                     </div>
                   );
