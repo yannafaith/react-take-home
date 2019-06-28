@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Header, Media, Buttons } from './styledcomponents.js'
+import { Header, Media, Buttons } from './styledcomponents.js';
 
 const App = () => {
 
@@ -43,7 +43,7 @@ const App = () => {
                   return (
                     <div key={index}>
                       <img src={content['cover_photo_url']} alt=''/>
-                      {content['media_type'] === 'video' &&                       <i id='play' className="fas fa-play"></i>}
+                      {content['media_type'] === 'video' && <i id='play' className="fas fa-play"></i>}
                       <Buttons>
                         <button onClick={() => copy(content['tracking_link'])}><i className="fal fa-link fa-flip-vertical"></i> </button>
                         <button><a href={content['download_url']} download><i className="fal fa-arrow-to-bottom"></i></a></button>
