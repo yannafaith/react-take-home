@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JetFuel Take Home Exercise
 
-## Available Scripts
+This is a frontend exercise that will give you the chance to see what kind of things we build at JetFuel!
 
-In the project directory, you can run:
+You will be building a simplified version of our main app, the Plug (www.plugco.in). This is the app through which our influencer access our offers, track their earnings, and manage their account. In particular, you will be recreating our main 'offer' feed:
 
-### `npm start`
+We've spun up an endpoint on our server to return a sample feed of offers as a JSON blob. You can access that here:
+http://www.plugco.in/public/take_home_sample_feed
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Your job is set up a react project that calls the sample endpoint and renders feed based on the JSON data returned. I've provided the design and an explanation of each component in a Sketch file - 'feed_template_react_01.sketch'. This file is included in the repository:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+![starter-screenshot](https://i.imgur.com/ynkHNTC.png)
 
-### `npm test`
+Note - We're only providing mobile designs. For the sake of this exercise, there's no need to build this for desktop!
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We have a starter app provided in the `./app` directory, please complete your project here.
 
-### `npm run build`
+Ideally, this should take around a day to finish, but let us know how much time you spent so we can calibrate our expectations!
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Getting started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run the following commands:
 
-### `npm run eject`
+```
+cd app
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After that, your browser should open up a skeleton React app. You can edit any file in `./src/` and in _most_ cases the website will hot-reload.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For more info, you can check out https://github.com/facebook/create-react-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Bonus
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+- Can you handle failed API requests gracefully? Maybe redirect to a 'failed' UI state with a rety option? 
+- Can you get the videos to play inline when the 'play' icon is tapped?
+- What steps can you take to optimize the load time of cover photos? How about the scroll performance? 
+- Can you add pull-to-refresh? 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Questions?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Feel free to reach out if you have any questions!
