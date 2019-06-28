@@ -12,6 +12,7 @@ const App = () => {
       setData(res.data.campaigns);
     }).catch( err => {
       console.log(err);
+      setData('error');
     })
   };
 
@@ -26,9 +27,11 @@ const App = () => {
 
   return (
     <div className="App">
-      {data && data.map((cam, index) => {
+      {data === null && <h1>Loading...</h1>}
+      {data === 'error' && <h1>Failed Request! Please, try again later.</h1>}
+      {data !== null && data.map((cam, index) => {
         return (
-          < div key={index}>
+          <div key={index}>
             <Header>
               <img src={cam['campaign_icon_url']} alt='icon'/>
               <div>
@@ -36,12 +39,11 @@ const App = () => {
                 <p>{cam['pay_per_install']} per install </p>
               </div>
             </Header>
-
             <Media>
               {
                 cam.medias.map((content, index) => {
                   return (
-                    <div key={index}>
+                    <div className="media" key={index}>
                       <img src={content['cover_photo_url']} alt=''/>
                       {content['media_type'] === 'video' && <i id='play' className="fas fa-play"></i>}
                       <Buttons>
@@ -53,7 +55,6 @@ const App = () => {
                 })
               }
             </Media>
-
           </div>
         );
       })}

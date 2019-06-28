@@ -31,18 +31,19 @@ export const Media = styled.div`{
     overflow: scroll;
     padding: 15px;
 
-    div {
+    .media {
         margin-right: 8px;
+        padding-right: 5px;
+        height: 235px;
 
         img {
-            height: 190px;
-            width: 110px;
+            height: 185px;
+            width: 108px;
             opacity: .6;
         };
 
         #play {
-            color: 
-            #27cc5c;
+            color: #27cc5c;
             position: relative;
             bottom: 95px;
             left: 40px;
@@ -57,14 +58,15 @@ export const Buttons = styled.div`{
     display: flex;
     width: 110px;
     justify-content: space-between;
+    position: relative;
+    bottom: 20px;
 
     button {
         height: 35px;
-        width: 49%;
-        border: solid black 1px;
+        width: 70px;
+        border: solid #cddee6 1px;
         border-radius: 5px;
         background-color: white;
-        border-color: #cddee6;
         color: gray;
         font-size: 1em;
         cursor: pointer;
@@ -82,4 +84,3 @@ export const Buttons = styled.div`{
     };
 
 }`;
-
