@@ -10,7 +10,6 @@ const App = () => {
     const URL = 'https://www.plugco.in/public/take_home_sample_feed';
     axios.get(URL).then( res => {
       setData(res.data.campaigns);
-      console.log(res.data.campaigns[0].medias[0]);
     }).catch( err => {
       console.log(err);
     })
@@ -27,9 +26,9 @@ const App = () => {
 
   return (
     <div className="App">
-      {data && data.map(cam => {
+      {data && data.map((cam, index) => {
         return (
-          <>
+          < div key={index}>
             <Header>
               <img src={cam['campaign_icon_url']} alt='icon'/>
               <div>
@@ -40,14 +39,14 @@ const App = () => {
 
             <Media>
               {
-                cam.medias.map(content => {
+                cam.medias.map((content, index) => {
                   return (
-                    <div>
+                    <div key={index}>
                       <img src={content['cover_photo_url']} alt=''/>
-                      <i id='play' class="fas fa-play"></i>
+                      {content['media_type'] === 'video' &&                       <i id='play' className="fas fa-play"></i>}
                       <Buttons>
                         <button onClick={() => copy(content['tracking_link'])}><i className="fal fa-link fa-flip-vertical"></i> </button>
-                        <button><a href={content['download_url']} download_url><i className="fal fa-arrow-to-bottom"></i></a></button>
+                        <button><a href={content['download_url']} download><i className="fal fa-arrow-to-bottom"></i></a></button>
                       </Buttons>
                     </div>
                   );
@@ -55,7 +54,7 @@ const App = () => {
               }
             </Media>
 
-          </>
+          </div>
         );
       })}
     </div>

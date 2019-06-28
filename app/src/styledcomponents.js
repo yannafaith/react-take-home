@@ -33,29 +33,29 @@ export const Media = styled.div`{
 
     div {
         margin-right: 8px;
-    }
 
-    img {
-        height: 200px;
-        width: 100px;
-        opacity: .6;
-    }
+        img {
+            height: 190px;
+            width: 110px;
+            opacity: .6;
+        };
 
-    #play {
-        color: 
-        #27cc5c;
-        position: relative;
-        bottom: 95px;
-        left: 40px;
-        font-size: 1.5em;
-        opacity: 1;
-    }
+        #play {
+            color: 
+            #27cc5c;
+            position: relative;
+            bottom: 95px;
+            left: 40px;
+            font-size: 1.5em;
+            opacity: 1;
+        };
+    };
 
 }`;
 
 export const Buttons = styled.div`{
     display: flex;
-    width: 100px;
+    width: 110px;
     justify-content: space-between;
 
     button {
@@ -71,8 +71,15 @@ export const Buttons = styled.div`{
 
         a {
             color: gray;
-        }
-    }
+            :hover {
+                color: blue;
+            };
+        };
+
+        :hover {
+            color: blue;
+        };
+    };
 
 }`;
 
